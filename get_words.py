@@ -202,37 +202,37 @@ def score(words):
 
 # -------------------- Main --------------------
 
-# if __name__ == "__main__":
-#     board = [
-#         ['qu', 'e', 'w', 'j'],
-#         ['y', 's', 'e', 'i'],
-#         ['t', 'e', 'n', 'w'],
-#         ['l', 'e', 'f', 'i']
-#     ]
-#     board_size = 4
+if __name__ == "__main__":
+    board = [
+        ['qu', 'e', 'w', 'j'],
+        ['y', 's', 'e', 'i'],
+        ['t', 'e', 'n', 'w'],
+        ['l', 'e', 'f', 'i']
+    ]
+    board_size = 4
 
-#     trie_root = None
-#     with open("trie.pkl", 'rb') as f:
-#         trie_root = pickle.load(f)
+    trie_root = None
+    with open("trie.pkl", 'rb') as f:
+        trie_root = pickle.load(f)
 
-#     # image = cv2.imread(r"test_images\tb1.jpg")
-#     # if image is None:
-#     #     print("Could not load image.")
-#     #     exit()
+    # image = cv2.imread(r"test_images\tb1.jpg")
+    # if image is None:
+    #     print("Could not load image.")
+    #     exit()
 
-#     # grid = split_image_into_grid(image)
+    # grid = split_image_into_grid(image)
     
-#     # board = [[None for _ in range(board_size)] for _ in range(board_size)]
+    # board = [[None for _ in range(board_size)] for _ in range(board_size)]
 
-#     # for i, row in enumerate(grid):
-#     #     for j, cell in enumerate(row):
-#     #         letter, _ = classify_tile(cell)
-#     #         board[i][j] = letter.lower()
+    # for i, row in enumerate(grid):
+    #     for j, cell in enumerate(row):
+    #         letter, _ = classify_tile(cell)
+    #         board[i][j] = letter.lower()
 
-#     print("Board:", board)
+    print("Board:", board)
     
-#     words = find_all_words(board, trie_root)
-#     words.sort(key=len, reverse=True)
-#     full_score = score(words)
+    words = find_all_words(board, trie_root)
+    words.sort(key=len, reverse=True)
+    full_score = score(words)
 
-#     print("Words sorted by length:", words, "\n\nFor a total score of", full_score)
+    print("Words sorted by length:", words, "\n\nFor a total score of", full_score)
